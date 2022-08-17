@@ -1,0 +1,43 @@
+﻿@model CRUD_Application.Models.Employee
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center text-primary">Add Employee</h1>
+                    <p class="text-center text-danger">@TempData["message"]</p>
+                </div>
+                <div class="Card-body">
+                    <form method="post" asp-action="Create">
+                        <div class="form-group">
+                            <label asp-for="Name"></label>
+                            <input type="text" asp-for="Name" class="form-control" placeholder="Enter employee name"/>
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="City"></label>
+                            <input type="text" asp-for="City" class="form-control" placeholder="Enter  city"/>
+                            <span asp-validation-for="City" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="province"></label>
+                            <input type="text" asp-for="province" class="form-control" placeholder="Enter  province"/>
+                             <span asp-validation-for="province" class="text-danger"></span>
+                        </div>
+                         <div class="form-group">
+                            <label asp-for="Salary"></label>
+                            <input type="text" asp-for="Salary" class="form-control" placeholder="Enter  salary"/>
+                             <span asp-validation-for="Salary" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit"value="Submit" class="btn btn-sm btn-outline-success float-right"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
